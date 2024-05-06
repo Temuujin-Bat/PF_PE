@@ -3,29 +3,19 @@ import { lazy } from 'react';
 
 import { MainLayout } from '../layouts';
 
-const LazyHome=lazy(()=>import('../pages/home'))
-const LazyStores = lazy(() => import('../pages/stores'));
+const LazyHome = lazy(() => import('../pages/home'));
 
-const InitRoutes = () => useRoutes([
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path:'/',
-        element:(
-          <LazyHome/>
-        )
-      },
-      {
-        path: '/stores',
-        element: (
-          <LazyStores />
-        ),
-      },
-    ],
-  },
-]);
+const InitRoutes = () =>
+  useRoutes([
+    {
+      element: <MainLayout />,
+      children: [
+        {
+          path: '/',
+          element: <LazyHome />,
+        },
+      ],
+    },
+  ]);
 
-export {
-  InitRoutes,
-};
+export { InitRoutes };

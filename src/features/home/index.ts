@@ -1,2 +1,3 @@
-export { default as HomeLeftSide } from "./components/HomeLeftSide";
-export { default as HomeRightSide } from "./components/HomeRightSide";
+export { default as HomeLeft } from './components/LeftSide.tsx/HomeLeft';
+
+export { default as HomeRight } from './components/RightSide.tsx/HomeRight';
