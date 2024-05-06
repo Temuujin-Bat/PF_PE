@@ -1,17 +1,25 @@
-import { FC } from 'react';
+import { FC } from "react";
 import {
-  createTheme, CssBaseline, PaletteMode, StyledEngineProvider, ThemeProvider,
-} from '@mui/material';
+  createTheme,
+  CssBaseline,
+  PaletteMode,
+  StyledEngineProvider,
+  ThemeProvider,
+} from "@mui/material";
 
-import ComponentsOverrides from './overrides';
-import { TThemeConfig } from './type';
+import ComponentsOverrides from "./overrides";
+import { TThemeConfig } from "./type";
 
 const ThemeConfig: FC<TThemeConfig> = ({ children }) => {
-  const baseFontSize = 18;
-
   const themeOptions = {
-    palette: { mode: 'dark' as PaletteMode },
-    typography: {htmlFontSize: baseFontSize},
+    palette: { mode: "dark" as PaletteMode },
+    typography: {
+      allVariants: {
+        color: "rgba(255, 255, 255, .8)",
+        fontFamily: "Roboto, sans-serif",
+        fontSize: 16,
+      },
+    },
   };
 
   const theme = createTheme(themeOptions);

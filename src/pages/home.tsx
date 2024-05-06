@@ -1,5 +1,5 @@
-import Grid from '@mui/material/Unstable_Grid2';
-import { HomeLeft, HomeRight } from '../features/home';
+import Grid from "@mui/material/Unstable_Grid2";
+import { HomeLeft, HomeRight } from "../features/home";
 
 export default function home() {
   return (
