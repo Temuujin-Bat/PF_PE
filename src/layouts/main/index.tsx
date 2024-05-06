@@ -1,12 +1,11 @@
-import { Outlet } from 'react-router-dom';
-import { styled } from '@mui/system';
-import { Box } from '@mui/material';
-import Toolbar from '@mui/material/Toolbar';
-import { ApplicationBar } from './Bar';
+import { Outlet } from "react-router-dom";
+import { styled } from "@mui/system";
+import { Box } from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
 
-const MainStyled = styled('main')(() => ({
-  width: '100%',
-  minHeight: 'calc(100vh - 88px)',
+const MainStyled = styled("main")(() => ({
+  width: "100%",
+  height: "100%",
   flexGrow: 1,
   borderBottomLeftRadius: 0,
   borderBottomRightRadius: 0,
@@ -14,7 +13,6 @@ const MainStyled = styled('main')(() => ({
 
 const MainLayout = () => (
   <Box height="100%" display="flex">
-    <ApplicationBar />
     <MainStyled>
       <Toolbar />
       <Outlet />
@@ -22,6 +20,4 @@ const MainLayout = () => (
   </Box>
 );
 
-export {
-  MainLayout,
-};
+export { MainLayout };

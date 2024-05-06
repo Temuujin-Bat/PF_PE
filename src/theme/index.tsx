@@ -10,8 +10,8 @@ const ThemeConfig: FC<TThemeConfig> = ({ children }) => {
   const baseFontSize = 18;
 
   const themeOptions = {
-    palette: { mode: 'light' as PaletteMode },
-    typography:{htmlFontSize: baseFontSize}
+    palette: { mode: 'dark' as PaletteMode },
+    typography: {htmlFontSize: baseFontSize},
   };
 
   const theme = createTheme(themeOptions);
