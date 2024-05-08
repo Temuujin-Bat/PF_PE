@@ -42,10 +42,15 @@ export default function HomeLeft() {
             border: "1px solid rgba(255, 10, 0, .5)",
             padding: "25px",
             "&:hover": { border: "1px solid rgba(255, 0, 0, 1)" },
-            position: "relative",
+            position: {
+              xs: "none",
+              sm: "relative",
+              md: "relative",
+              lg: "relative",
+            },
           }}
         >
-          <Box>
+          <Box sx={{ mb: "1em" }}>
             <Typography sx={{ color: "rgba(255, 255, 255, .5)" }}>
               welcome
             </Typography>
@@ -81,9 +86,14 @@ export default function HomeLeft() {
 
           <Box
             sx={{
-              position: "absolute",
+              position: {
+                xs: "none",
+                sm: "absolute",
+                md: "absolute",
+                lg: "absolute",
+              },
               right: { xs: "10px", sm: "20px", md: "10px", lg: "30px" },
-              bottom: { xs: "20px", sm: "20px", md: "10px", lg: "30px" },
+              bottom: { xs: "5px", sm: "20px", md: "10px", lg: "30px" },
               display: "flex",
             }}
           >
