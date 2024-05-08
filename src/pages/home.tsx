@@ -4,11 +4,11 @@ import { HomeLeft, HomeRight } from "../features/home";
 export default function home() {
   return (
     <Grid container spacing={2}>
-      <Grid xs={12} sm={12} md={12} lg={8}>
+      <Grid xs={12} sm={12} md={8} lg={8}>
         <HomeLeft />
       </Grid>
 
-      <Grid xs={12} sm={12} md={12} lg={4}>
+      <Grid xs={12} sm={12} md={4} lg={4}>
         <HomeRight />
       </Grid>
     </Grid>

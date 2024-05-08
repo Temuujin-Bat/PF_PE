@@ -1,9 +1,36 @@
-import { Box, Button, Paper, Typography } from "@mui/material";
+import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import pdfFile from "../../../../assets/dummy.pdf";
+
+import javascriptIcon from "../../../../assets/primaryTools/javascript.png";
+import typescriptIcon from "../../../../assets/primaryTools/typescript.webp";
+import cssIcon from "../../../../assets/primaryTools/css.png";
+import htmlIcon from "../../../../assets/primaryTools/html.png";
+import sassIcon from "../../../../assets/primaryTools/sass.png";
+import muiIcon from "../../../../assets/primaryTools/mui.png";
+import nodeIcon from "../../../../assets/primaryTools/node.png";
+import expressIcon from "../../../../assets/primaryTools/express.png";
+import gitIcon from "../../../../assets/primaryTools/git.png";
+import mongoDBIcon from "../../../../assets/primaryTools/mongoDB.png";
+import reactIcon from "../../../../assets/primaryTools/react.png";
+
+const primaryTools = [
+  { src: cssIcon, label: "CSS" },
+  { src: htmlIcon, label: "HTML" },
+  { src: sassIcon, label: "SASS" },
+  { src: muiIcon, label: "MUI" },
+  { src: javascriptIcon, label: "JAVASCRIPT" },
+  { src: typescriptIcon, label: "TYPESCRIPT" },
+  { src: reactIcon, label: "REACT" },
+  { src: nodeIcon, label: "NODE.JS" },
+  { src: expressIcon, label: "EXPRESS.JS" },
+  { src: mongoDBIcon, label: "MONGODB" },
+  { src: gitIcon, label: "GIT" },
+];
 
 export default function HomeLeft() {
   return (
@@ -11,9 +38,9 @@ export default function HomeLeft() {
       <Grid xs={12} sm={12} md={12} lg={12}>
         <Paper
           sx={{
-            height: "350px",
+            height: { xs: "auto", sm: "auto", md: "350px", lg: "350px" },
             border: "1px solid rgba(255, 10, 0, .5)",
-            padding: "30px",
+            padding: "25px",
             "&:hover": { border: "1px solid rgba(255, 0, 0, 1)" },
             position: "relative",
           }}
@@ -55,13 +82,13 @@ export default function HomeLeft() {
           <Box
             sx={{
               position: "absolute",
-              right: "30px",
-              bottom: "30px",
+              right: { xs: "10px", sm: "20px", md: "10px", lg: "30px" },
+              bottom: { xs: "20px", sm: "20px", md: "10px", lg: "30px" },
               display: "flex",
             }}
           >
             <Button
-              href="https://google.com"
+              href="https://github.com/Temuujin-Bat"
               target="_blank"
               sx={{
                 color: "white",
@@ -89,7 +116,7 @@ export default function HomeLeft() {
               <GitHubIcon sx={{ fontSize: "1.4em" }} />
             </Button>
             <Button
-              href="https://google.com"
+              href="https://il.linkedin.com/in/temuujin-bat-erdene-4984a42a7"
               target="_blank"
               sx={{
                 color: "white",
@@ -151,40 +178,207 @@ export default function HomeLeft() {
       </Grid>
 
       <Grid xs={12} sm={12} md={12} lg={12} container>
-        <Grid xs={12} sm={12} md={12} lg={6}>
+        <Grid xs={12} sm={12} md={12} lg={9}>
           <Paper
             sx={{
-              height: "350px",
+              height: { xs: "auto", sm: "auto", md: "350px", lg: "350px" },
               border: "1px solid rgba(255, 0, 0, .5)",
-              padding: "30px",
+              padding: "25px",
               "&:hover": { border: "2px solid rgba(255, 0, 0, 1)" },
             }}
           >
             <Typography
-              sx={{ fontWeight: "bold", fontSize: "1.1em", color: "white" }}
+              sx={{
+                fontWeight: "bold",
+                fontSize: "1.1em",
+                color: "white",
+                mb: "1.5rem",
+              }}
             >
               Primary tools
             </Typography>
 
-            <Grid container>
-              <Grid xs={12} sm={12} md={12} lg={6}></Grid>
+            <Grid
+              container
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              spacing={2}
+            >
+              {primaryTools.map((tool, index) => (
+                <Grid xs={3} sm={3} md={3} lg={3} key={index}>
+                  <Box
+                    sx={{
+                      border: "1px solid rgba(255, 10, 0, .5)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                      padding: ".7em 0px",
+                      borderRadius: "15px",
+                      "&:hover": { border: "1px solid rgba(255, 10, 0, 1)" },
+                      height: "68px",
+                    }}
+                  >
+                    <Stack
+                      component="img"
+                      src={tool.src}
+                      sx={{ height: "1.5em", mb: ".2em" }}
+                    />
+                    <Typography sx={{ fontSize: "0.7em", fontWeight: "bold" }}>
+                      {tool.label}
+                    </Typography>
+                  </Box>
+                </Grid>
+              ))}
             </Grid>
           </Paper>
         </Grid>
 
-        <Grid xs={12} sm={12} md={12} lg={6}>
+        <Grid xs={12} sm={12} md={12} lg={3}>
           <Paper
             sx={{
-              height: "350px",
+              height: { xs: "auto", sm: "auto", md: "350px", lg: "350px" },
               border: "1px solid rgba(255, 0, 0, .5)",
-              padding: "30px",
+              padding: "25px",
               "&:hover": { border: "2px solid rgba(255, 0, 0, 1)" },
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ab
-            magnam ducimus harum unde obcaecati numquam expedita. Non provident
-            veritatis ex! Saepe, quasi dicta molestias culpa ab quis totam.
-            Corporis.
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                fontSize: "1.1em",
+                color: "white",
+                mb: "1.5rem",
+              }}
+            >
+              Projects
+            </Typography>
+
+            <Grid container spacing={2}>
+              <Grid xs={12} sm={4} md={12} lg={12}>
+                <Button
+                  href="https://google.com"
+                  target="_blank"
+                  sx={{
+                    border: "1px solid rgba(255, 0, 0, .5)",
+                    width: "100%",
+                    height: "68px",
+                    padding: ".7em 0px",
+                    borderRadius: "15px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    "&:hover": {
+                      border: "1px solid rgba(255, 10, 0, 1)",
+                      "& svg": {
+                        top: ".1em",
+                        right: ".1em",
+                        color: "rgba(255, 10, 0, 1)",
+                      },
+                      "& p": {
+                        fontWeight: "bold",
+                        color: "white",
+                      },
+                    },
+                    position: "relative",
+                  }}
+                >
+                  <Typography sx={{ fontSize: ".7em" }}>Rentify</Typography>
+                  <ArrowOutwardIcon
+                    sx={{
+                      position: "absolute",
+                      top: ".2em",
+                      right: ".2em",
+                      color: "white",
+                    }}
+                  />
+                </Button>
+              </Grid>
+              <Grid xs={12} sm={4} md={12} lg={12}>
+                <Button
+                  href="https://google.com"
+                  target="_blank"
+                  sx={{
+                    border: "1px solid rgba(255, 0, 0, .5)",
+                    width: "100%",
+                    height: "68px",
+                    padding: ".7em 0px",
+                    borderRadius: "15px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    "&:hover": {
+                      border: "1px solid rgba(255, 10, 0, 1)",
+                      "& svg": {
+                        top: ".1em",
+                        right: ".1em",
+                        color: "rgba(255, 10, 0, 1)",
+                      },
+                      "& p": {
+                        fontWeight: "bold",
+                        color: "white",
+                      },
+                    },
+                    position: "relative",
+                  }}
+                >
+                  <Typography sx={{ fontSize: ".7em" }}>To Do</Typography>
+                  <ArrowOutwardIcon
+                    sx={{
+                      position: "absolute",
+                      top: ".3em",
+                      right: ".3em",
+                      color: "white",
+                    }}
+                  />
+                </Button>
+              </Grid>
+              <Grid xs={12} sm={4} md={12} lg={12}>
+                <Button
+                  href="https://google.com"
+                  target="_blank"
+                  sx={{
+                    border: "1px solid rgba(255, 0, 0, .5)",
+                    width: "100%",
+                    height: "68px",
+                    padding: ".7em 0px",
+                    borderRadius: "15px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    "&:hover": {
+                      border: "1px solid rgba(255, 10, 0, 1)",
+                      "& svg": {
+                        top: ".1em",
+                        right: ".1em",
+                        color: "rgba(255, 10, 0, 1)",
+                      },
+                      "& p": {
+                        fontWeight: "bold",
+                        color: "white",
+                      },
+                    },
+                    position: "relative",
+                  }}
+                >
+                  <Typography sx={{ fontSize: ".7em" }}>Airsoft</Typography>
+                  <ArrowOutwardIcon
+                    sx={{
+                      position: "absolute",
+                      top: ".2em",
+                      right: ".2em",
+                      color: "white",
+                    }}
+                  />
+                </Button>
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
