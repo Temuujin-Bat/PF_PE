@@ -1,6 +1,6 @@
-import Grid from '@mui/material/Unstable_Grid2';
-import LeftToolsProjects from './LeftToolsProjects';
-import LeftWelcome from './LeftWelcome';
+import Grid from "@mui/material/Unstable_Grid2";
+import LeftToolsProjects from "./LeftToolsProjects";
+import LeftWelcome from "./LeftWelcome";
 
 export default function HomeLeft() {
   return (

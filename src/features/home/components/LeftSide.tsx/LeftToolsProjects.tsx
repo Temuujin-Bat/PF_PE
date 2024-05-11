@@ -1,7 +1,7 @@
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from "@mui/material/Unstable_Grid2";
 
-import LeftPrimaryTools from './LeftPrimaryTools';
-import LeftProjects from './LeftProjects';
+import LeftPrimaryTools from "./LeftPrimaryTools";
+import LeftProjects from "./LeftProjects";
 
 export default function LeftToolsProjects() {
   return (
